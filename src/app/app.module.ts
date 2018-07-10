@@ -5,7 +5,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCardModule, MatDividerModule, MatMenuModule, MatToolbarModule} from '@angular/material';
 import {CounterComponent} from './counter/counter.component';
 import {CounterService} from './counter.service';
-import { OtherCounterComponent } from './other-counter/other-counter.component';
+import {OtherCounterComponent} from './other-counter/other-counter.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,8 @@ import { OtherCounterComponent } from './other-counter/other-counter.component';
     MatCardModule,
     MatDividerModule
   ],
-  providers: [CounterService],
+  // providers: [CounterService],
+  providers: [{ provide: CounterService, useClass: CounterService}],
   bootstrap: [AppComponent]
 })
 export class AppModule {
