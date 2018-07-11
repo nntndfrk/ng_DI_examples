@@ -7,6 +7,15 @@ import {CounterComponent} from './counter/counter.component';
 import {CounterService} from './counter.service';
 import {OtherCounterComponent} from './other-counter/other-counter.component';
 
+const localCounter = {
+  count: 0,
+  increaseCount: function () {
+    this.count++;
+    console.log(`from Object - ${this.count}`);
+    return this.count;
+  }
+};
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +32,10 @@ import {OtherCounterComponent} from './other-counter/other-counter.component';
     MatDividerModule
   ],
   // providers: [CounterService],
-  providers: [{ provide: CounterService, useClass: CounterService}],
+  providers: [
+    // {provide: CounterService, useClass: CounterService},
+    {provide: CounterService, useValue: localCounter}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

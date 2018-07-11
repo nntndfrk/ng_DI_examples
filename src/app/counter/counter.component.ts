@@ -12,11 +12,13 @@ export class CounterComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.counter.count.subscribe(c => this.count = c);
+    this.count = this.counter.count;
   }
 
   increase() {
     this.counter.increaseCount();
+    console.log(`from Class - ${this.count}`);
+    this.count = this.counter.count;
   }
 
 }
