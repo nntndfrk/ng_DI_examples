@@ -1,15 +1,9 @@
 export class CounterService {
-  constructor() {
-  }
-
-  private _count = 0;
-
-  get count() {
-    return this._count;
-  }
+  count = 0;
 
   increaseCount() {
-    this._count++;
+    this.count++;
+    console.log(`from Class - ${this.count}`);
     return this.count;
   }
 }

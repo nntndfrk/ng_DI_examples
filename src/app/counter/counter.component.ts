@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import {CounterService} from '../counter.service';
 
 @Component({
@@ -8,7 +8,9 @@ import {CounterService} from '../counter.service';
 })
 export class CounterComponent implements OnInit {
   count: number;
-  constructor(private counter: CounterService) {
+  counter;
+  constructor(counter: CounterService) {
+    this.counter = counter;
   }
 
   ngOnInit() {
@@ -17,7 +19,6 @@ export class CounterComponent implements OnInit {
 
   increase() {
     this.counter.increaseCount();
-    console.log(`from Class - ${this.count}`);
     this.count = this.counter.count;
   }
 

@@ -7,14 +7,15 @@ import {CounterComponent} from './counter/counter.component';
 import {CounterService} from './counter.service';
 import {OtherCounterComponent} from './other-counter/other-counter.component';
 
-const localCounter = {
+const localCounter: CounterService = {
   count: 0,
   increaseCount: function () {
-    this.count++;
+    this.count += 2;
     console.log(`from Object - ${this.count}`);
     return this.count;
   }
 };
+
 
 @NgModule({
   declarations: [
