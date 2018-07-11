@@ -26,8 +26,8 @@ import {OtherLoggerService} from './other-logger.service';
   ],
   providers: [
     CounterService,
-    // {provide: LoggerService, useClass: LoggerService},
-    {provide: LoggerService, useClass: OtherLoggerService}
+    {provide: LoggerService, useClass: LoggerService},
+    {provide: OtherLoggerService, useExisting: LoggerService}
   ],
   bootstrap: [AppComponent]
 })
