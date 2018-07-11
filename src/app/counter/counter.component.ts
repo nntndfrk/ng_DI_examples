@@ -9,6 +9,8 @@ import {LOCAL_COUNTER} from '../counter';
 })
 export class CounterComponent implements OnInit {
   count: number;
+
+  // CounterService - используется просто как тип
   constructor(@Inject(LOCAL_COUNTER) public counter: CounterService) {
   }
 
