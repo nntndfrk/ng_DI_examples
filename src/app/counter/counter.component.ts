@@ -8,9 +8,8 @@ import {CounterService} from '../counter.service';
 })
 export class CounterComponent implements OnInit {
   count: number;
-  counter;
-  constructor(counter: CounterService) {
-    this.counter = counter;
+
+  constructor(private counter: CounterService) {
   }
 
   ngOnInit() {
