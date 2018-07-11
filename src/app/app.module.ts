@@ -6,6 +6,8 @@ import {MatButtonModule, MatCardModule, MatDividerModule, MatMenuModule, MatTool
 import {CounterComponent} from './counter/counter.component';
 import {CounterService} from './counter.service';
 import {OtherCounterComponent} from './other-counter/other-counter.component';
+import {LoggerService} from './logger.service';
+import {OtherLoggerService} from './other-logger.service';
 
 @NgModule({
   declarations: [
@@ -22,8 +24,11 @@ import {OtherCounterComponent} from './other-counter/other-counter.component';
     MatCardModule,
     MatDividerModule
   ],
-  // providers: [CounterService],
-  providers: [{ provide: CounterService, useClass: CounterService}],
+  providers: [
+    CounterService,
+    // {provide: LoggerService, useClass: LoggerService},
+    {provide: LoggerService, useClass: OtherLoggerService}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

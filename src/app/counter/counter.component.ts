@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {CounterService} from '../counter.service';
+import {LoggerService} from '../logger.service';
 
 @Component({
   selector: 'app-counter',
@@ -8,11 +9,18 @@ import {CounterService} from '../counter.service';
 })
 export class CounterComponent implements OnInit {
   count: number;
-  constructor(private counter: CounterService) {
+
+  constructor(
+    private counter: CounterService,
+    private logger: LoggerService
+  ) {
   }
 
   ngOnInit() {
-    this.counter.count.subscribe(c => this.count = c);
+    this.counter.count.subscribe(c => {
+      this.count = c;
+      this.logger.log(c.toString());
+    });
   }
 
   increase() {
