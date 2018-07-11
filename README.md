@@ -2,6 +2,8 @@
 
 - Simple variant - simple, simple-component-provider branches
 
+- ProvidedIn - providedIn
+
 - Provider Object Literal - provider_Object_Literal branch
 
 - Aliased class providers - aliased_class_providers branch

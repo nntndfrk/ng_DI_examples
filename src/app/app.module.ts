@@ -22,7 +22,7 @@ import { OtherCounterComponent } from './other-counter/other-counter.component';
     MatCardModule,
     MatDividerModule
   ],
-  providers: [CounterService],
+  // providers: [CounterService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
