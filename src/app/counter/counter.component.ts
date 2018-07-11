@@ -1,5 +1,6 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import {CounterService} from '../counter.service';
+import {LOCAL_COUNTER} from '../counter';
 
 @Component({
   selector: 'app-counter',
@@ -8,9 +9,7 @@ import {CounterService} from '../counter.service';
 })
 export class CounterComponent implements OnInit {
   count: number;
-  counter;
-  constructor(counter: CounterService) {
-    this.counter = counter;
+  constructor(@Inject(LOCAL_COUNTER) public counter: CounterService) {
   }
 
   ngOnInit() {

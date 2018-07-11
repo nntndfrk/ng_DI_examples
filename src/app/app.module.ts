@@ -4,17 +4,9 @@ import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCardModule, MatDividerModule, MatMenuModule, MatToolbarModule} from '@angular/material';
 import {CounterComponent} from './counter/counter.component';
-import {CounterService} from './counter.service';
 import {OtherCounterComponent} from './other-counter/other-counter.component';
-
-const localCounter: CounterService = {
-  count: 0,
-  increaseCount: function () {
-    this.count += 2;
-    console.log(`from Object - ${this.count}`);
-    return this.count;
-  }
-};
+import {LOCAL_COUNTER, localCounter} from './counter';
+import {CounterService} from './counter.service';
 
 
 @NgModule({
@@ -34,8 +26,8 @@ const localCounter: CounterService = {
   ],
   // providers: [CounterService],
   providers: [
-    // {provide: CounterService, useClass: CounterService},
-    {provide: CounterService, useValue: localCounter}
+    CounterService,
+    {provide: LOCAL_COUNTER, useValue: localCounter}
   ],
   bootstrap: [AppComponent]
 })
