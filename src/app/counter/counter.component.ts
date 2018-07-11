@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Injector, OnInit} from '@angular/core';
 import {CounterService} from '../counter.service';
 
 @Component({
@@ -8,7 +8,9 @@ import {CounterService} from '../counter.service';
 })
 export class CounterComponent implements OnInit {
   count: number;
-  constructor(private counter: CounterService) {
+  counter: CounterService; // CounterService только для типа
+  constructor(private injector: Injector) {
+    this.counter = this.injector.get(CounterService);
   }
 
   ngOnInit() {
