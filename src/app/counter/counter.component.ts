@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, Optional} from '@angular/core';
 import {CounterService} from '../counter.service';
 
 @Component({
@@ -8,16 +8,26 @@ import {CounterService} from '../counter.service';
 })
 export class CounterComponent implements OnInit {
   count: number;
-  constructor(private counter: CounterService) {
+  constructor(@Optional() private counter: CounterService) {
   }
 
   ngOnInit() {
-    this.count = this.counter.count;
+    if (this.counter) {
+      this.count = this.counter.count;
+    } else {
+      this.count = 100;
+      console.log('Use the built-in counter');
+    }
   }
 
   increase() {
-    this.counter.increaseCount();
-    this.count = this.counter.count;
+    if (this.counter) {
+      this.counter.increaseCount();
+      this.count = this.counter.count;
+    } else {
+      this.count += 10;
+      console.log('Use the built-in counter');
+    }
   }
 
 }
