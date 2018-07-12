@@ -18,4 +18,4 @@
 
 - Injecting injector - injecting_injector branch
 
-- Static injector - static_injector
+- Static injector - static_injector branch
