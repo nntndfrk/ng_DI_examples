@@ -2,7 +2,7 @@
 
 - Simple variant - simple, simple-component-provider branches
 
-- ProvidedIn - providedIn
+- ProvidedIn - providedIn branch
 
 - Provider Object Literal - provider_Object_Literal branch
 
