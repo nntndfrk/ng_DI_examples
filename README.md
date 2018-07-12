@@ -1,27 +1,21 @@
-# DiExamples
+# Angular Dependency Injection Examples
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.7.
+- Simple variant - simple, simple-component-provider branches
 
-## Development server
+- ProvidedIn - providedIn branch
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Provider Object Literal - provider_Object_Literal branch
 
-## Code scaffolding
+- Aliased class providers - aliased_class_providers branch
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Value provider - value_provider branch
 
-## Build
+- Non-class dependencies - non_class_dependencies branch
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+- Factory provider - factory_provider branch
 
-## Running unit tests
+- Optional dependencies - optional_dependencies branch
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Injecting injector - injecting_injector branch
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- Static injector - static_injector branch
