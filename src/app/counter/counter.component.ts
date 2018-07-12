@@ -20,6 +20,7 @@ export class CounterComponent implements OnInit {
 
   increase() {
     this.counter.increaseCount();
+    this.count = this.counter.count;
   }
 
 }
