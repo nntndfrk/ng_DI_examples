@@ -15,3 +15,5 @@
 - Optional dependencies - optional_dependencies branch
 
 - Injecting injector - injecting_injector branch
+
+- Static Injector - static_injector

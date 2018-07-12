@@ -1,9 +1,12 @@
-import {Injectable} from '@angular/core';
 import {BehaviorSubject} from 'rxjs';
+import {LoggerService} from './logger.service';
+import {OtherLoggerService} from './other-logger.service';
 
-@Injectable()
 export class CounterService {
-  constructor() {
+  constructor(
+    private loggerService: LoggerService,
+    private otherLoggerService: OtherLoggerService
+  ) {
   }
 
   private _count = 0;
@@ -15,6 +18,8 @@ export class CounterService {
 
   increaseCount() {
     this._count++;
+    this.loggerService.log(this._count.toString());
+    this.otherLoggerService.log(this._count.toString());
     this._count$.next(this._count);
   }
 }

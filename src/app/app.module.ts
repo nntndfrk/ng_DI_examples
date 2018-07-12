@@ -25,9 +25,13 @@ import {OtherLoggerService} from './other-logger.service';
     MatDividerModule
   ],
   providers: [
-    CounterService,
-    // {provide: LoggerService, useClass: LoggerService},
-    {provide: LoggerService, useClass: OtherLoggerService}
+    LoggerService,
+    OtherLoggerService,
+    {
+      provide: CounterService,
+      useClass: CounterService,
+      deps: [LoggerService, OtherLoggerService]
+    }
   ],
   bootstrap: [AppComponent]
 })
