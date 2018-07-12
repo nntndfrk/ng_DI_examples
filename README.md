@@ -1,21 +1,23 @@
 # Angular Dependency Injection Examples
 
-- Simple variant - simple, simple-component-provider branches
+- [Simple variant](https://stackblitz.com/github/nntndfrk/ng_DI_examples/tree/simple) - simple branch
 
-- ProvidedIn - providedIn branch
+- [Simple variant with component provider](https://stackblitz.com/github/nntndfrk/ng_DI_examples/tree/simple-component-provider) - simple-component-provider branch
 
-- Provider Object Literal - provider_Object_Literal branch
+- [ProvidedIn](https://stackblitz.com/github/nntndfrk/ng_DI_examples/tree/providedIn) - providedIn branch
 
-- Aliased class providers - aliased_class_providers branch
+- [Provider Object Literal](https://stackblitz.com/github/nntndfrk/ng_DI_examples/tree/provider_Object_Literal) - provider_Object_Literal branch
 
-- Value provider - value_provider branch
+- [Aliased class providers](https://stackblitz.com/github/nntndfrk/ng_DI_examples/tree/aliased_class_providers) - aliased_class_providers branch
 
-- Non-class dependencies - non_class_dependencies branch
+- [Value provider](https://stackblitz.com/github/nntndfrk/ng_DI_examples/tree/value_provider) - value_provider branch
 
-- Factory provider - factory_provider branch
+- [Non-class dependencies](https://stackblitz.com/github/nntndfrk/ng_DI_examples/tree/non_class_dependencies) - non_class_dependencies branch
 
-- Optional dependencies - optional_dependencies branch
+- [Factory provider](https://stackblitz.com/github/nntndfrk/ng_DI_examples/tree/factory_provider) - factory_provider branch
 
-- Injecting injector - injecting_injector branch
+- [Optional dependencies](https://stackblitz.com/github/nntndfrk/ng_DI_examples/tree/optional_dependencies) - optional_dependencies branch
 
-- Static injector - static_injector branch
+- [Injecting injector](https://stackblitz.com/github/nntndfrk/ng_DI_examples/tree/injecting_injector) - injecting_injector branch
+
+- [Static injector](https://stackblitz.com/github/nntndfrk/ng_DI_examples/tree/static_injector) - static_injector branch
