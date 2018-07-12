@@ -15,9 +15,7 @@ export class CounterComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.counter.count.subscribe(c => {
-      this.count = c;
-    });
+    this.count = this.counter.count;
   }
 
   increase() {
